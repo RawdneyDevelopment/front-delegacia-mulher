@@ -1,8 +1,7 @@
 import { useState } from 'react';
+import  RoutesComponent  from './routers/routers';
 
 import GlobalStyles from './globalStyles';
-
-import Login from './Pages/Login';
 
 
 function App() {
@@ -11,8 +10,7 @@ function App() {
   return (
     <div>
       <GlobalStyles/>
-      <Login/>
-    
+       <RoutesComponent/> 
     </div>
   )
 }

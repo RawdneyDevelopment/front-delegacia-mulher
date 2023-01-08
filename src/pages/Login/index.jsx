@@ -1,11 +1,10 @@
 import {React, useState} from "react";
 import { LoginBackground, Box, Header, Title, SubTitle, LoginForm, InputWrapper, Input, LoginButton, PassVisibilityBtn, CheckboxWrapper } from "./styles";
 import Checkbox from "../../components/Checkbox";
-
-
+import { Router } from 'react-router-dom';
 
 const Login = () => {
-
+    
     const [ type, setType ] = useState('password');
     const [ icon, setIcon ] = useState("invisible");
 
@@ -22,7 +21,7 @@ const Login = () => {
     };
 
     function PasswordVisibility(props) {
-        return(
+      return(
             <PassVisibilityBtn ariaLabel="Mostrar/Esconder Senha" role="button" onClick={handleToggle}>
             
             {props.icon === 'invisible' ? 
@@ -41,8 +40,10 @@ const Login = () => {
     const LoginClick =(e) => {
         e.preventDefault();
     };
+        
 
     return(
+
         <LoginBackground className="loginbgpos-anim">
             <Box>
                 <Header>
